@@ -20,6 +20,18 @@ async function addProblem(req , res, next){
 };
 
 async function getProblem(req, res, next){
+    try {
+        const problem = await problemService.getProblem(req.params.id);
+        return res.status(StatusCodes.CREATED).json({
+            success: true,
+            message: 'Successfully fetched a problem',
+            error: {},
+            data: problem
+        })
+    } 
+    catch (error) {
+        next(error);
+    }
 };
 
 async function getProblems(req , res, next){
