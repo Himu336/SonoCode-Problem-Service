@@ -16,6 +16,4 @@ class ProblemRepository{
     }
 }
 
-module.exports = {
-    ProblemRepository
-}
+module.exports = ProblemRepository;
