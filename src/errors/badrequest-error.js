@@ -7,4 +7,4 @@ class BadRequestError extends BaseError {
     }
 };
 
-module.exports = BadRequest;
+module.exports = BadRequestError;
